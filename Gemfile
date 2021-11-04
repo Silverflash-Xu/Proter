@@ -34,8 +34,10 @@ group :development, :test do
   gem 'sqlite3', '~> 1.3.6'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  #gem 'web-console', '~> 2.0'
 end
+
+ gem 'web-console', group: :development
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
