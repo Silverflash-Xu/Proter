@@ -1,0 +1,30 @@
+<h2>Edit Existing Product</h2>
+<%= form_tag product_path(@product), :method => :put do %>
+  <%= label :product, :name, 'Name', :class => 'col-form-label' %>
+  <%= text_field :product, :name, :class => 'form-control' %>
+
+  <%= label :product, :brand, 'Brand', :class => 'col-form-label' %>
+  <%= text_field :product, :brand, :class => 'form-control' %>
+
+  <%= label :product, :price, 'Price', :class => 'col-form-label' %>
+  <%= text_field :product, :price, :class => 'form-control' %>
+
+  <%= label :product, :weight, 'Weight', :class => 'col-form-label' %>
+  <%= text_field :product, :weight, :class => 'form-control' %>
+
+  <%= label :product, :color, 'Color', :class => 'col-form-label' %>
+  <%= select :product, :color, ['Black','White','Grey','Wood','Beige','Walnut'], {}, {:class => 'form-control col-1'} %>
+
+  <%= label :product, :discount, 'Discount', :class => 'col-form-label' %>
+  <%= text_field :product, :discount, :class => 'form-control' %>
+
+  <%= label :product, :category, 'Category', :class => 'col-form-label'  %>
+  <%= select :product, :category, ['Chair','Table','Bed','Storage'], {}, {:class => 'form-control col-1'} %>
+
+  <%= label :product, :box, 'Box size as WxLxH', :class => 'col-form-label' %>
+  <%= text_field :product, :box, :class => 'form-control' %>
+
+  <br/>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', products_path, :class => 'btn btn-secondary' %>
+<% end %>

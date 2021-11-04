@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'movies#index'
+  root 'products#index'
 
   resources :movies
   # Example of regular route:
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
           controller: 'clearance/passwords',
           only: [:edit, :update]
       end
+  resources :products
+    
   # Example resource route with options:
   #   resources :products do
   #     member do
